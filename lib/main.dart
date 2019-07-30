@@ -5,10 +5,22 @@ import 'package:fake_douban/ui/market/market.dart';
 import 'package:fake_douban/ui/group/group.dart';
 import 'package:fake_douban/ui/mine/mine.dart';
 import 'package:fake_douban/ui/res/res.dart';
+import 'package:fake_douban/config/app_theme.dart';
+import 'package:fake_douban/redux/app_state.dart';
+import 'package:redux/redux.dart';
+import 'package:flutter_redux/flutter_redux.dart';
 
 void main() => runApp(MainPage());
 
 class MainPage extends StatefulWidget {
+
+  final store = Store<AppState>(
+    appReducer,
+    initialState: AppState(
+      currentIndex: 0
+    )
+  );
+
   @override
   State<StatefulWidget> createState() {
     return MainPageState();
@@ -17,7 +29,6 @@ class MainPage extends StatefulWidget {
 
 class MainPageState extends State<MainPage> {
   List<Widget> pages = List<Widget>();
-  int _currentIndex = 0;
 
   @override
   void initState() {
@@ -31,18 +42,20 @@ class MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Fake Douban',
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-        primaryColor: Colors.green,
-      ),
-      home: Scaffold(
-        body: SafeArea(
-          child: HomePage(),
-        ),
-        bottomNavigationBar: HomeBottomNav(),
-      ),
+    return StoreProvider(
+      store: widget.store,
+      child: new StoreBuilder<AppState>(builder: (context,store){
+        return MaterialApp(
+          title: 'Fake Douban',
+          theme: AppTheme().getAppTheme(),
+          home: Scaffold(
+            body: SafeArea(
+              child: pages[widget.store.state.currentIndex],
+            ),
+            bottomNavigationBar: HomeBottomNav(),
+          ),
+        );
+      }),
     );
   }
 }

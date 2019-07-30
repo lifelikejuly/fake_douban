@@ -24,6 +24,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   fish_redux: ^0.2.4
+  flutter_redux: 0.5.3
+  webview_flutter: 0.3.10+3
+#  flutter_webview_plugin: 0.3.5
 
 dev_dependencies:
   flutter_test:
@@ -48,6 +51,49 @@ flutter:
 
   assets:
     - res/img/ic_douban_avatar.jpg
+
+
+
+
+
+
+    - res/icon/ic_mark_todo.png
+    - res/icon/ic_tab_home_normal.png
+    - res/icon/ic_tab_subject_normal.png
+    - res/icon/ic_tab_group_normal.png
+    - res/icon/ic_tab_shiji_normal.png
+    - res/icon/ic_tab_profile_normal.png
+
+    - res/icon/ic_search.png
+    - res/icon/ic_scan.png
+    - res/icon/ic_mail.png
+    - res/icon/ic_more.png
+    - res/icon/ic_comment.png
+    - res/icon/ic_change_round.png
+    - res/icon/ic_vote.png
+    - res/icon/ic_settings.png
+    - res/icon/bg_mine_login.png
+
+    - res/icon/ic_group_comment.png
+
+  ## mine
+
+    - res/icon/ic_me_orders.png
+    - res/icon/ic_me_albums.png
+    - res/icon/ic_me_ark.png
+    - res/icon/ic_me_bookmarks.png
+    - res/icon/ic_me_follows.png
+    - res/icon/ic_me_diary.png
+    - res/icon/ic_me_compose.png
+    - res/icon/ic_me_shopping_cart.png
+    - res/icon/ic_me_wallet.png
+
+
+
+  ## moke
+
+    - res/mock/mock_dynamic.json
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

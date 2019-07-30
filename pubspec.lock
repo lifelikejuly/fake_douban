@@ -48,6 +48,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_redux:
+    dependency: "direct main"
+    description:
+      name: flutter_redux
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.5.3"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -88,6 +95,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.0.3"
+  redux:
+    dependency: transitive
+    description:
+      name: redux
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "3.0.0"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -149,5 +163,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.0.8"
+  webview_flutter:
+    dependency: "direct main"
+    description:
+      name: webview_flutter
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.3.10+3"
 sdks:
   dart: ">=2.2.2 <3.0.0"
+  flutter: ">=1.5.0 <2.0.0"
