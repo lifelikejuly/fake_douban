@@ -37,8 +37,7 @@ class HomeBottomNavState extends State<HomeBottomNav> {
           unselectedItemColor: Colors.grey,
           selectedItemColor: Colors.green,
           currentIndex: currentIndex,
-          onTap: selectNav
-          ,
+          onTap: selectNav,
           type: BottomNavigationBarType.fixed,
         );
       },

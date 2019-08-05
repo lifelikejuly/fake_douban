@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fake_douban/config/app_colors.dart';
+import 'package:smooth_star_rating/smooth_star_rating.dart';
 
 class SearchMovieCard extends StatelessWidget {
   final String movieName;
@@ -32,6 +33,15 @@ class SearchMovieCard extends StatelessWidget {
                   movieScore.toString(),
                   style: TextStyle(fontSize: 15),
                 ),
+                SmoothStarRating(
+                    allowHalfRating: true,
+                    onRatingChanged: (rating) {},
+                    starCount: 5,
+                    rating: 3.9,
+                    size: 10.0,
+                    color: Colors.orange,
+                    borderColor: Colors.grey,
+                    spacing: 0.0),
                 Text(
                   movieType,
                   style: TextStyle(fontSize: 12, color: AppColors.appGrey),

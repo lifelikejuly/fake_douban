@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fake_douban/widget/text12.dart';
 import 'package:fake_douban/model/dynamic_bean_entity.dart';
+import 'package:smooth_star_rating/smooth_star_rating.dart';
 
 class DynamicUserMovie extends StatefulWidget {
 
@@ -15,6 +16,24 @@ class DynamicUserMovie extends StatefulWidget {
 class _DynamicUserMovieState extends State<DynamicUserMovie> {
 
   DynamicBeanMovie dynamicBeanMovie;
+
+
+  getStatus(String text){
+    if(text.isEmpty){
+      return SmoothStarRating(
+          allowHalfRating: true,
+          onRatingChanged: (rating){},
+          starCount: 5,
+          rating: 3.9,
+          size: 10.0,
+          color: Colors.orange,
+          borderColor: Colors.grey,
+          spacing: 0.0
+      );
+    }else{
+      return Text12(dynamicBeanMovie.play);
+    }
+  }
 
   @override
   void initState() {
@@ -67,7 +86,7 @@ class _DynamicUserMovieState extends State<DynamicUserMovie> {
                           dynamicBeanMovie.name,
                           style: TextStyle(fontSize: 14),
                         ),
-                        Text12(dynamicBeanMovie.play),
+                        getStatus(dynamicBeanMovie.play),
                         Text12(dynamicBeanMovie.key,
                             color: Colors.grey),
                       ],

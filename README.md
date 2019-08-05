@@ -1,6 +1,9 @@
 # fake_douban
 
-A new Flutter project.
+A new Flutter Study project.
+
+This is My First Flutter Project that fake DouBan App,use MockData to display Some Content.Only want to try create App by Flutter is how Awesome.
+Hope can help other developer know how to write a simple Flutter app.If you feel good maybe give me a start.
 
 ## Getting Started
 
@@ -15,21 +18,18 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+## ScreenShoot
+![](/art/img1.jpeg)![](/art/img2.jpeg)![](/art/img3.jpeg)![](/art/img4.jpeg)
+
 ## Features
 
-- [-]Home
-- [x]Book
-- [-]Group
-- [x]Market 
-- [-]Mine
+-[x]Home
+-[x]Book
+-[x]Group
+-[x]Market 
+-[x]Mine
 
-## TODO
-
-- CustomerPageViewer
-- itemCard
-
-
-## Log
+## ReviewCode
 
 ### BottomNavigationBar
 
@@ -41,7 +41,8 @@ samples, guidance on mobile development, and a full API reference.
 
 ### Redux
 
-
 ### WebView
+
+### SliverAppBar
 
 

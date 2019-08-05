@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:fake_douban/ui/group/group_history_msg_item.dart';
+import 'dart:convert';
+import 'dart:async';
+import 'package:flutter/services.dart';
+import 'package:fake_douban/model/group_message_entity.dart';
 
 class GroupHisotryList extends StatefulWidget {
   @override
@@ -8,6 +12,23 @@ class GroupHisotryList extends StatefulWidget {
 
 class _GroupHisotryListState extends State<GroupHisotryList> {
   List<Widget> groupWidgets = List<Widget>();
+  List<GroupHistoryMsgItem> groupMsgs = List<GroupHistoryMsgItem>();
+
+  Future<String> _loadGroupsJson() async {
+    return await rootBundle.loadString('res/mock/mock_group_msg.json');
+  }
+
+  decodeGroupsList() async {
+    List<GroupHistoryMsgItem> Msgs = List<GroupHistoryMsgItem>();
+    String groupsJson = await _loadGroupsJson();
+    List<dynamic> list = json.decode(groupsJson);
+    final models = GroupMsgList.fromJson(list);
+    models.groupMsgList
+        .forEach((item) => { Msgs.add(GroupHistoryMsgItem(item))});
+    setState(() {
+      groupMsgs = Msgs;
+    });
+  }
 
   @override
   void initState() {
@@ -30,20 +51,16 @@ class _GroupHisotryListState extends State<GroupHisotryList> {
         ],
       ),
     );
+
     groupWidgets.add(groupTop);
     groupWidgets.add(Divider());
-    groupWidgets.add(GroupHistoryMsgItem());
-    groupWidgets.add(GroupHistoryMsgItem());
-    groupWidgets.add(GroupHistoryMsgItem());
-    groupWidgets.add(GroupHistoryMsgItem());
-    groupWidgets.add(GroupHistoryMsgItem());
-    groupWidgets.add(GroupHistoryMsgItem());
+    decodeGroupsList();
   }
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: groupWidgets,
+      children: [...groupWidgets,...groupMsgs],
     );
   }
 }

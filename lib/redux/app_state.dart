@@ -1,8 +1,6 @@
 import 'package:fake_douban/redux/app_redux.dart';
 class AppState{
   int currentIndex;
-
-
   AppState({this.currentIndex});
 }
 

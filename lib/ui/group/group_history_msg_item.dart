@@ -1,12 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:fake_douban/config/app_colors.dart';
+import 'package:fake_douban/model/group_message_entity.dart';
 
 class GroupHistoryMsgItem extends StatefulWidget {
+  final GroupMessageEntity groupMessageEntity;
+
+  const GroupHistoryMsgItem(this.groupMessageEntity) : super();
+
   @override
   _GroupHistoryMsgItemState createState() => _GroupHistoryMsgItemState();
 }
 
 class _GroupHistoryMsgItemState extends State<GroupHistoryMsgItem> {
+  GroupMessageEntity groupMessageEntity;
+
+  @override
+  void initState() {
+    super.initState();
+    groupMessageEntity = widget.groupMessageEntity;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -14,11 +27,14 @@ class _GroupHistoryMsgItemState extends State<GroupHistoryMsgItem> {
       child: Row(
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.only( right: 15, top: 10, bottom: 10),
+            padding: EdgeInsets.only(right: 15, top: 10, bottom: 10),
             child: Column(
               children: <Widget>[
-                Image.asset("res/icon/ic_group_comment.png",width: 20,),
-                Text("10")
+                Image.asset(
+                  "res/icon/ic_group_comment.png",
+                  width: 20,
+                ),
+                Text(groupMessageEntity.msg.toString())
               ],
             ),
           ),
@@ -28,23 +44,26 @@ class _GroupHistoryMsgItemState extends State<GroupHistoryMsgItem> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 Text(
-                  "title",
+                  groupMessageEntity.title,
                   style: TextStyle(fontSize: 15),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
-                    Image.asset("res/icon/ic_group_comment.png",width: 30,height: 30,),
+                    Image.asset(
+                      "res/icon/ic_group_comment.png",
+                      width: 30,
+                      height: 30,
+                    ),
                     Padding(
-                      padding:EdgeInsets.only(left: 10,right: 10),
+                      padding: EdgeInsets.only(left: 10, right: 10),
                       child: Text(
-                        "groupName",
+                        groupMessageEntity.groupName,
                         style: TextStyle(fontSize: 14, color: AppColors.grey),
                       ),
-                    )
-                    ,
+                    ),
                     Text(
-                      "time",
+                      groupMessageEntity.date,
                       style: TextStyle(fontSize: 12, color: AppColors.appGrey),
                     )
                   ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fake_douban/ui/search/search.dart';
 import 'package:fake_douban/config/app_config.dart';
+import 'package:fake_douban/ui/message/message.dart';
 
 class SearchToolFakeBar extends StatefulWidget {
   final bool defalut;
@@ -22,6 +23,11 @@ class SearchToolFakeBarState extends State<SearchToolFakeBar> {
                 defalut: widget.defalut,
               )),
     );
+  }
+
+  messageCenter() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => MessagePage()));
   }
 
   @override
@@ -58,9 +64,12 @@ class SearchToolFakeBarState extends State<SearchToolFakeBar> {
         Center(
           child: Padding(
             padding: EdgeInsets.only(right: 10),
-            child: ImageIcon(
-              AssetImage("res/icon/ic_mail.png"),
-              color: widget.defalut ? AppColors.appWhite : AppColors.grey,
+            child: GestureDetector(
+              child: ImageIcon(
+                AssetImage("res/icon/ic_mail.png"),
+                color: widget.defalut ? AppColors.appWhite : AppColors.grey,
+              ),
+              onTap: messageCenter,
             ),
           ),
         )

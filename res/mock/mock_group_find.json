@@ -1,0 +1,62 @@
+[
+  {
+    "groupType": "新组速报",
+    "groups": [
+      {
+        "groupIcon": "",
+        "groupName": "拍我家的老门给你看",
+        "groupMember": 73
+      },
+      {
+        "groupIcon": "",
+        "groupName": "今天我没生气",
+        "groupMember": 360
+      },
+      {
+        "groupIcon": "",
+        "groupName": "甲方迷惑行为大赏",
+        "groupMember": 73
+      }
+    ]
+  },
+  {
+    "groupType": "小组是个追剧的好地方",
+    "groups": [
+      {
+        "groupIcon": "",
+        "groupName": "吹落的树叶",
+        "groupMember": 2425
+      },
+      {
+        "groupIcon": "",
+        "groupName": "陈情令",
+        "groupMember": 43176
+      },
+      {
+        "groupIcon": "",
+        "groupName": "怪奇物语",
+        "groupMember": 4300
+      }
+    ]
+  },
+  {
+    "groupType": "今天出门了",
+    "groups": [
+      {
+        "groupIcon": "",
+        "groupName": "上海老建筑癖摄影作品",
+        "groupMember": 19088
+      },
+      {
+        "groupIcon": "",
+        "groupName": "花满蹊",
+        "groupMember": 1976
+      },
+      {
+        "groupIcon": "",
+        "groupName": "星空仰望者",
+        "groupMember": 9258
+      }
+    ]
+  }
+]
