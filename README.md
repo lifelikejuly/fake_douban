@@ -19,18 +19,12 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 ## ScreenShoot
-<figure class="third">
-    <img src="/art/img1.jpeg" width="25%">
-    <img src="/art/img2.jpeg" width="25%">
-    <img src="/art/img3.jpeg" width="25%">
-</figure>
-
 <table>
     <tr>
-        <td ><center><img src="/art/img1.jpeg" >图1</center></td>
-        <td ><center><img src="/art/img2.jpeg" >图2</center></td>
-        <td ><center><img src="/art/img3.jpeg" >图3</center></td>
-        <td ><center><img src="/art/img4.jpeg" >图4</center></td>  
+        <td ><center><img src="/art/img1.jpeg" ></center></td>
+        <td ><center><img src="/art/img2.jpeg" ></center></td>
+        <td ><center><img src="/art/img3.jpeg" ></center></td>
+        <td ><center><img src="/art/img4.jpeg" ></center></td>  
     </tr>
 </table>
 
