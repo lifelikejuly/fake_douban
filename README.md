@@ -19,7 +19,12 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 ## ScreenShoot
-![](/art/img1.jpeg)![](/art/img2.jpeg)![](/art/img3.jpeg)![](/art/img4.jpeg)
+<figure >
+    <img src="/art/img1.jpe">
+    <img src="/art/img2.jpeg">
+    <img src="/art/img3.jpeg">
+    <img src="/art/img4.jpeg">
+</figure>
 
 ## Features
 
