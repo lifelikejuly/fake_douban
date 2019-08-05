@@ -19,12 +19,12 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 ## ScreenShoot
-<figure >
+<center class="half">
     <img src="/art/img1.jpe">
     <img src="/art/img2.jpeg">
     <img src="/art/img3.jpeg">
     <img src="/art/img4.jpeg">
-</figure>
+</center>
 
 ## Features
 
