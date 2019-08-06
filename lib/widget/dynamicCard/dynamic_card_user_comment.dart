@@ -56,11 +56,13 @@ class _DynamicUserCommentState extends State<DynamicUserComment> {
                   child: DecoratedBox(
                     decoration: BoxDecoration(color: Colors.grey),
                   )),
-              Padding(
-                padding: EdgeInsets.only(left: 5),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: comments,
+              Flexible(
+                child: Padding(
+                  padding: EdgeInsets.only(left: 5),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: comments,
+                  ),
                 ),
               ),
             ],
