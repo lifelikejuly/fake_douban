@@ -2,8 +2,10 @@
 
 A new Flutter Study project.
 
-This is My First Flutter Project that fake DouBan App,use MockData to display Some Content.Only want to try create App by Flutter is how Awesome.
-Hope can help other developer know how to write a simple Flutter app.If you feel good maybe give me a start.
+This is My First Flutter Project that fake DouBan App,use MockData to display Some Content.
+Only want to try create App by Flutter is how Awesome.
+Hope can help other developer know how to write a simple Flutter app.
+If you feel good maybe give me a Star.
 
 ## Getting Started
 
