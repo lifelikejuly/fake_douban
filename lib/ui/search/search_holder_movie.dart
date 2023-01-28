@@ -15,8 +15,8 @@ class SearchMovieCard extends StatelessWidget {
     return Center(
       child: Row(
         children: <Widget>[
-          Image.network(
-            "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2563624785.webp",
+          Image.asset(
+            "res/img/movie.webp",
             height: 60,
           ),
           Padding(
@@ -35,7 +35,6 @@ class SearchMovieCard extends StatelessWidget {
                 ),
                 SmoothStarRating(
                     allowHalfRating: true,
-                    onRatingChanged: (rating) {},
                     starCount: 5,
                     rating: 3.9,
                     size: 10.0,

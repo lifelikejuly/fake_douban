@@ -22,7 +22,6 @@ class _DynamicUserMovieState extends State<DynamicUserMovie> {
     if(text.isEmpty){
       return SmoothStarRating(
           allowHalfRating: true,
-          onRatingChanged: (rating){},
           starCount: 5,
           rating: 3.9,
           size: 10.0,
@@ -72,9 +71,10 @@ class _DynamicUserMovieState extends State<DynamicUserMovie> {
                     padding: EdgeInsets.only(right: 5),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(2),
-                      child: Image.network(
-                        "https://img3.doubanio.com/view/photo/s_ratio_poster/public/p2563624785.webp",
+                      child: Image.asset(
+                        "res/img/movie.webp",
                         height: 50,
+                        width: 100,
                       ),
                     ),
                   ),

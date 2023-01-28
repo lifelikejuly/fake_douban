@@ -1,4 +1,4 @@
-package com.example.fake_douban;
+package com.julyyu.fake_douban;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
