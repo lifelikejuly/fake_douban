@@ -26,7 +26,7 @@ class _MineTopViewState extends State<MineTopView> {
       pinned: true,
       leading: GestureDetector(
         onTap: (){
-          MainPage.rewardAd.show();
+          MainPage.rewardAd?.show();
         },
         child: Image.asset(
           "res/icon/ic_settings.png",

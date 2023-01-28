@@ -1,3 +1,5 @@
+import 'package:admob_flutter/admob_flutter.dart';
+import 'package:fake_douban/config/app_ad.dart';
 import 'package:flutter/material.dart';
 import 'package:fake_douban/widget/search_toolbar.dart';
 import 'package:fake_douban/ui/search/search_holder_movie.dart';
@@ -44,6 +46,13 @@ class _SearchPageState extends State<SearchPage> {
                 style: TextStyle(fontSize: 15),
                 textAlign: TextAlign.start,
               ),
+            ),
+            AdmobBanner(
+              adUnitId: getBannerAdUnitId(),
+              adSize: AdmobBannerSize.BANNER,
+              onBannerCreated:
+                  (AdmobBannerController controller) {
+              },
             ),
             Expanded(
               child: GridView.count(

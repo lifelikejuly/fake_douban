@@ -56,7 +56,7 @@ class SearchToolFakeBarState extends State<SearchToolFakeBar> {
               ),
               GestureDetector(
                 onTap: (){
-                  MainPage.rewardAd.show();
+                  MainPage.rewardAd?.show();
                 },
                 child: ImageIcon(
                   AssetImage("res/icon/ic_scan.png"),

@@ -46,7 +46,7 @@ class HomeDynamicPageState extends State<HomeDynamicPage> {
             child: ListView.builder(
               padding: const EdgeInsets.only(top: 16, bottom: 16),
               itemBuilder: (context, position) {
-                if(position == 2 || position == 4 || position == 6){
+                if(position == 0 || position == dynamics.length + 1){
                   return AdmobBanner(
                     adUnitId: getBannerAdUnitId(),
                     adSize: AdmobBannerSize.BANNER,
@@ -54,10 +54,11 @@ class HomeDynamicPageState extends State<HomeDynamicPage> {
                         (AdmobBannerController controller) {
                     },
                   );
+                }else{
+                  return HomeDynamicCard(dynamics[position - 1]);
                 }
-                return HomeDynamicCard(dynamics[position]);
               },
-              itemCount: dynamics.length + 3,
+              itemCount: dynamics.length + 2,
             ),
             onRefresh: toRefresh),
         floatingActionButton: FloatingActionButton(
