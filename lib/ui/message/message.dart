@@ -1,3 +1,5 @@
+import 'package:admob_flutter/admob_flutter.dart';
+import 'package:fake_douban/config/app_ad.dart';
 import 'package:flutter/material.dart';
 
 class MessagePage extends StatefulWidget {
@@ -55,6 +57,12 @@ class _NoticeListState extends State<NoticeList> {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemBuilder: (context, position) {
+        if (position / 10 == 0)
+          return AdmobBanner(
+            adUnitId: getBannerAdUnitId(),
+            adSize: AdmobBannerSize.BANNER,
+            onBannerCreated: (AdmobBannerController controller) {},
+          );
         return Center(
           child: Text("$position"),
         );
@@ -87,11 +95,31 @@ class _TestListState extends State<TestList> {
           ),
         ),
         Text("lll"),
+        AdmobBanner(
+          adUnitId: getBannerAdUnitId(),
+          adSize: AdmobBannerSize.BANNER,
+          onBannerCreated: (AdmobBannerController controller) {},
+        ),
         Text("lll"),
         Text("lll"),
+        AdmobBanner(
+          adUnitId: getBannerAdUnitId(),
+          adSize: AdmobBannerSize.BANNER,
+          onBannerCreated: (AdmobBannerController controller) {},
+        ),
+        Text("lll"),
+        AdmobBanner(
+          adUnitId: getBannerAdUnitId(),
+          adSize: AdmobBannerSize.BANNER,
+          onBannerCreated: (AdmobBannerController controller) {},
+        ),
         Text("lll"),
         Text("lll"),
-        Text("lll"),
+        AdmobBanner(
+          adUnitId: getBannerAdUnitId(),
+          adSize: AdmobBannerSize.BANNER,
+          onBannerCreated: (AdmobBannerController controller) {},
+        ),
       ],
     );
   }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fake_douban/ui/message/message.dart';
 
+import '../../main.dart';
+
 class MineTopView extends StatefulWidget {
   final Color _dynamicColor;
   final String _title;
@@ -22,10 +24,15 @@ class _MineTopViewState extends State<MineTopView> {
     return SliverAppBar(
       expandedHeight: 150,
       pinned: true,
-      leading: Image.asset(
-        "res/icon/ic_settings.png",
-        color: widget._dynamicColor,
-        scale: 3,
+      leading: GestureDetector(
+        onTap: (){
+          MainPage.rewardAd.show();
+        },
+        child: Image.asset(
+          "res/icon/ic_settings.png",
+          color: widget._dynamicColor,
+          scale: 3,
+        ),
       ),
       backgroundColor: Colors.white,
       centerTitle: true,

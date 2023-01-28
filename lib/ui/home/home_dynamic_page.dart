@@ -1,3 +1,5 @@
+import 'package:admob_flutter/admob_flutter.dart';
+import 'package:fake_douban/config/app_ad.dart';
 import 'package:flutter/material.dart';
 import 'package:fake_douban/widget/dynamicCard/home_dynamic_item_card.dart';
 import 'dart:convert';
@@ -44,9 +46,18 @@ class HomeDynamicPageState extends State<HomeDynamicPage> {
             child: ListView.builder(
               padding: const EdgeInsets.only(top: 16, bottom: 16),
               itemBuilder: (context, position) {
+                if(position == 2 || position == 4 || position == 6){
+                  return AdmobBanner(
+                    adUnitId: getBannerAdUnitId(),
+                    adSize: AdmobBannerSize.BANNER,
+                    onBannerCreated:
+                        (AdmobBannerController controller) {
+                    },
+                  );
+                }
                 return HomeDynamicCard(dynamics[position]);
               },
-              itemCount: dynamics.length,
+              itemCount: dynamics.length + 3,
             ),
             onRefresh: toRefresh),
         floatingActionButton: FloatingActionButton(

@@ -1,3 +1,4 @@
+import 'package:admob_flutter/admob_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:fake_douban/widget/home_bottom_nav.dart';
 import 'package:fake_douban/ui/home/home.dart';
@@ -12,7 +13,11 @@ import 'package:flutter_redux/flutter_redux.dart';
 import 'package:flutter/services.dart';
 import 'dart:io';
 
+import 'config/app_ad.dart';
+
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Admob.initialize();
   runApp(MainPage());
   if (Platform.isAndroid) {
     // 以下两行 设置android状态栏为透明的沉浸。写在组件渲染之后，是为了在渲染后进行set赋值，覆盖状态栏，写在渲染之前MaterialApp组件会覆盖掉这个值。
@@ -25,6 +30,21 @@ void main() {
 class MainPage extends StatefulWidget {
   final store =
       Store<AppState>(appReducer, initialState: AppState(currentIndex: 0));
+
+
+  static AdmobReward rewardAd;
+
+
+  @override
+  void initState() {
+    rewardAd = AdmobReward(
+      adUnitId: getRewardBasedVideoAdUnitId(),
+      listener: (AdmobAdEvent event, Map<String, dynamic> args) {
+        if (event == AdmobAdEvent.closed) rewardAd.load();
+      },
+    );
+    rewardAd.load();
+  }
 
   @override
   State<StatefulWidget> createState() {

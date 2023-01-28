@@ -28,6 +28,8 @@ dependencies:
   webview_flutter: 1.0.6
 #  flutter_webview_plugin: 0.3.5
   smooth_star_rating: ^1.0.3
+  admob_flutter: 1.0.1
+#  flutter_qq_ads: 1.5.0
 
 dev_dependencies:
   flutter_test:

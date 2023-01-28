@@ -3,6 +3,8 @@ import 'package:fake_douban/ui/search/search.dart';
 import 'package:fake_douban/config/app_config.dart';
 import 'package:fake_douban/ui/message/message.dart';
 
+import '../main.dart';
+
 class SearchToolFakeBar extends StatefulWidget {
   final bool defalut;
 
@@ -52,9 +54,14 @@ class SearchToolFakeBarState extends State<SearchToolFakeBar> {
                   onTap: search,
                 ),
               ),
-              ImageIcon(
-                AssetImage("res/icon/ic_scan.png"),
-                color: AppColors.grey,
+              GestureDetector(
+                onTap: (){
+                  MainPage.rewardAd.show();
+                },
+                child: ImageIcon(
+                  AssetImage("res/icon/ic_scan.png"),
+                  color: AppColors.grey,
+                ),
               )
             ],
           ),
